@@ -9,6 +9,8 @@
 bower_components
 node_modules
 
+shims-vue.d.ts
+
 /site/_site
 
 dist

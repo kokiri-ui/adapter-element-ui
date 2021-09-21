@@ -42,8 +42,10 @@ export default class Button
   public render(h: CreateElement): VNode {
     const props: Record<string, any> = { size: convertSize(this.size), disabled: this.disabled };
 
-    if (includes(this.color, ['primary', 'danger'])) {
+    if (includes(this.color, ['primary', 'success', 'warning', 'danger', 'info'])) {
       props.type = this.color;
+    } else if (this.border === 'none' && this.outlined) {
+      props.type = 'text';
     }
 
     return h(

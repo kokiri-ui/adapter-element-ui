@@ -1,17 +1,18 @@
 *.log
 
+.*-tmp
+.*-cache
 .DS_Store
 .git
 .idea
-.asset-cache
-.sass-cache
+.jekyll-metadata
+.tmp
+
+shims-sfc.d.ts
+shims-vue.d.ts
+
+_site
 
 bower_components
 node_modules
-
-shims-vue.d.ts
-
-/site/_site
-
 dist
-/test

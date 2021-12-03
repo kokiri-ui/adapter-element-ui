@@ -13,11 +13,11 @@ import { getComponentName, convertSize } from '../../basic';
 })
 export default class Form extends FormStructuralComponent {
   private render(h: CreateElement): VNode {
-    const props: Record<string, any> = { model: this.value, showMessage: !this.hideMessage };
-
-    if (this.controlSize) {
-      props.size = convertSize(this.controlSize);
-    }
+    const props: Record<string, any> = {
+      model: this.value,
+      showMessage: !this.hideMessage,
+      size: this.controlSize ? convertSize(this.controlSize) : 'medium',
+    };
 
     if (this.layout === 'inline') {
       props.inline = true;

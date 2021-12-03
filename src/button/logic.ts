@@ -1,7 +1,7 @@
 import { includes } from '@ntks/toolbox';
 
 import { CreateElement, VNode } from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Inject } from 'vue-property-decorator';
 
 import { ButtonStructuralComponent } from '@kokiri/core/dist/button';
 import ElButton from 'element-ui/lib/button';
@@ -14,9 +14,14 @@ import { getComponentName, convertSize } from '../basic';
   name: getComponentName('button'),
 })
 export default class Button extends ButtonStructuralComponent {
+  @Inject({ from: 'elFormItem', default: null })
+  private readonly elFormItem!: any;
+
   private render(h: CreateElement): VNode {
     const props: Record<string, any> = {
-      size: convertSize(this.size),
+      size: this.size
+        ? convertSize(this.size)
+        : (this.elFormItem && this.elFormItem.elFormItemSize) || 'medium',
       disabled: this.disabled,
       plain: this.outlined,
       nativeType: this.nativeType,

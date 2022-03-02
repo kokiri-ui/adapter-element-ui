@@ -28,7 +28,7 @@ export default class TextArea extends TextAreaStructuralComponent {
       placeholder: this.placeholder,
       clearable: this.clearable,
       rows: this.rows,
-      showWordLimit: this.wordage,
+      showWordLimit: this.showWordage,
     };
 
     if (this.maxLength) {

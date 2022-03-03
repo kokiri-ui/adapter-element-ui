@@ -4,7 +4,7 @@ import { getComponentName as _getComponentName } from '@kokiri/core/dist/basic';
 type ElSizeType = '' | 'medium' | 'small' | 'mini';
 
 function getComponentName(moduleName: string): string {
-  return _getComponentName(moduleName, 'PetalsElement');
+  return _getComponentName(moduleName, 'KokiriElementUi');
 }
 
 function convertSize(size: ButtonSize): ElSizeType {

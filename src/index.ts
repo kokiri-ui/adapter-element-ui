@@ -40,3 +40,5 @@ export * from './popover';
 export * from './divider';
 
 export * from './ellipsis';
+
+export * from './link';

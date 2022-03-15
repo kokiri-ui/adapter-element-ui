@@ -1,7 +1,7 @@
 import { Component } from 'vue-property-decorator';
+import ElMain from 'element-ui/lib/main';
 
 import { LayoutMainStructuralComponent } from '@kokiri/core/dist/layout';
-import ElMain from 'element-ui/lib/main';
 
 import { getComponentName } from '../../basic';
 

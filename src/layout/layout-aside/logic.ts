@@ -1,7 +1,7 @@
 import { Component } from 'vue-property-decorator';
+import ElAside from 'element-ui/lib/aside';
 
 import { LayoutAsideStructuralComponent } from '@kokiri/core/dist/layout';
-import ElAside from 'element-ui/lib/aside';
 
 import { getComponentName } from '../../basic';
 

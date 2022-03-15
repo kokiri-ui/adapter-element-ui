@@ -1,8 +1,14 @@
 export * from './icon';
 export * from './button';
 
+// Containers
+export * from './flex';
+export * from './toolbar';
+export * from './card';
+
 // Layouts
 export * from './layout';
+export * from './grid';
 
 // Typography
 export * from './heading';
@@ -42,8 +48,3 @@ export * from './divider';
 export * from './ellipsis';
 
 export * from './link';
-
-export * from './flex';
-export * from './toolbar';
-
-export * from './card';

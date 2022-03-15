@@ -1,7 +1,7 @@
 import { Component } from 'vue-property-decorator';
+import ElFooter from 'element-ui/lib/footer';
 
 import { LayoutFooterStructuralComponent } from '@kokiri/core/dist/layout';
-import ElFooter from 'element-ui/lib/footer';
 
 import { getComponentName } from '../../basic';
 

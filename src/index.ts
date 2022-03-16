@@ -18,8 +18,9 @@ export * from './text';
 // Input fields
 export * from './text-input';
 export * from './text-area';
-export * from './select';
+export * from './number-input';
 export * from './radio';
+export * from './select';
 export * from './checkbox';
 export * from './switch';
 export * from './tree';

@@ -1,17 +1,18 @@
 import { Component, Inject } from 'vue-property-decorator';
-import ElInput from 'element-ui/lib/input';
+import ElInputNumber from 'element-ui/lib/input-number';
 
-import { TextInputStructuralComponent } from '@kokiri/core/dist/text-input';
+import { isNumber } from '@kokiri/core/dist/basic';
+import { NumberInputStructuralComponent } from '@kokiri/core/dist/number-input';
 
 import { getComponentName, convertSize } from '../basic';
 
 @Component({
   // @ts-ignore
   abstract: true,
-  name: getComponentName('textInput'),
-  components: { ElInput },
+  name: getComponentName('numberInput'),
+  components: { ElInputNumber },
 })
-export default class TextInput extends TextInputStructuralComponent {
+export default class NumberInput extends NumberInputStructuralComponent {
   @Inject({ from: 'elFormItem', default: null })
   private readonly elFormItem!: any;
 
@@ -22,18 +23,19 @@ export default class TextInput extends TextInputStructuralComponent {
       disabled: this.disabled,
       readonly: this.readonly,
       placeholder: this.placeholder,
-      clearable: this.clearable,
       size: this.size
         ? convertSize(this.size)
         : (this.elFormItem && this.elFormItem.elFormItemSize) || 'medium',
+      step: this.step,
+      controlsPosition: 'right',
     };
 
-    if (this.maxLength) {
-      props.maxlength = this.maxLength;
+    if (isNumber(this.max)) {
+      props.max = this.max;
     }
 
-    if (this.minLength) {
-      props.minlength = this.minLength;
+    if (isNumber(this.min)) {
+      props.min = this.min;
     }
 
     return props;

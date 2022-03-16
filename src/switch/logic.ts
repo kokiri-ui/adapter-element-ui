@@ -1,7 +1,7 @@
 import { Component } from 'vue-property-decorator';
+import ElSwitch from 'element-ui/lib/switch';
 
 import { SwitchStructuralComponent } from '@kokiri/core/dist/switch';
-import ElSwitch from 'element-ui/lib/switch';
 
 import { getComponentName } from '../basic';
 

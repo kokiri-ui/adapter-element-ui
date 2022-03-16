@@ -11,4 +11,16 @@ function convertSize(size: ButtonSize): ElSizeType {
   return size === 'large' ? '' : size === 'small' ? size : 'medium';
 }
 
-export { getComponentName, convertSize };
+function convertPlacement(placement: string): string {
+  const parts = placement.split('-');
+
+  if (parts.length === 1) {
+    return placement;
+  }
+
+  return parts[0] === 'top' || parts[0] === 'bottom'
+    ? `${parts[0]}-${parts[1] === 'left' ? 'start' : 'end'}`
+    : `${parts[0]}-${parts[1] === 'top' ? 'start' : 'end'}`;
+}
+
+export { getComponentName, convertSize, convertPlacement };

@@ -33,6 +33,7 @@ export * from './radio';
 export * from './select';
 export * from './checkbox';
 export * from './switch';
+export * from './transfer';
 export * from './tree';
 export * from './searchable-tree';
 

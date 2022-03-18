@@ -1,5 +1,6 @@
 import { CreateElement, VNode } from 'vue';
 import { Component } from 'vue-property-decorator';
+
 import ElContainer from 'element-ui/lib/container';
 
 import { isSpecificComponent } from '@kokiri/core/dist/basic';

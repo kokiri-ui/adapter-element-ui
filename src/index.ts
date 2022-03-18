@@ -6,6 +6,7 @@ export * from './text';
 // Container
 export * from './flex';
 export * from './toolbar';
+export * from './tabs';
 export * from './card';
 
 // Layout
